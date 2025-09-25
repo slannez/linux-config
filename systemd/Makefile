@@ -20,7 +20,7 @@ install_system_pamac:
 
 install_autoconnect:
 	@echo Installing systemd user service... 
-	install network-autoconnect.service ~/.config/systemd/user
+	install user/network-autoconnect.service ~/.config/systemd/user
 	systemctl --user daemon-reload
 	systemctl --user enable network-autoconnect.service
 	systemctl --user start network-autoconnect.service
