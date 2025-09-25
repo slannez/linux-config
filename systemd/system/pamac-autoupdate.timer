@@ -1,0 +1,11 @@
+[Unit]
+Description=Update the system packages
+After=network-online.target
+
+[Timer]
+OnCalendar=monthly
+ExecStart=/usr/bin/pamac upgrade --no-confirm
+
+[Install]
+WantedBy=default.target
+

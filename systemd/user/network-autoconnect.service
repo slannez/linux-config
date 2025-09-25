@@ -1,0 +1,12 @@
+[Unit]
+Description=Automatically connect to a network
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/nmcli connection up Orange
+# ExecStop=/usr/bin/nmcli connection down Orange
+Type=oneshot
+
+[Install]
+WantedBy=default.target
+
