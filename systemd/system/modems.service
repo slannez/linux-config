@@ -1,0 +1,11 @@
+[Unit]
+Description=Initialize 5G modems on startup
+Before=ModemManager.service
+
+[Service]
+ExecStart=/usr/bin/bash /usr/local/sbin/wwan-setup.sh
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+
