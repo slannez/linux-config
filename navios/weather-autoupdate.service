@@ -1,0 +1,10 @@
+[Unit]
+Description=Update the system packages
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/pamac upgrade --no-confirm
+
+[Install]
+WantedBy=default.target
+
